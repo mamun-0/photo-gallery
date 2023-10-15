@@ -1,6 +1,8 @@
+import SectionHeading from "../SectionHeading/SectionHeading";
 import "./Hero.css";
 const Hero = () => {
   return (
+    <>
     <div className="hero-section">
       <div className="hero-content">
         <h1>Welcome to Our Website</h1>
@@ -11,6 +13,8 @@ const Hero = () => {
         <button>Get Started</button>
       </div>
     </div>
+    <SectionHeading title={"Photos"}/>
+    </>
   );
 };
 
