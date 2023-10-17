@@ -1,3 +1,4 @@
+import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import Hero from "./Components/Hero/Hero";
 import ImageList from "./Components/ImageCard/ImageList";
@@ -9,11 +10,12 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
-      {/* <ImageList /> */}
-      {/* <Animal /> */}
-      {/* <Nature /> */}
-      {/* <People/> */}
+      <BrowserRouter>
+        <Route path="/" exact component={Hero} />
+        <Route path="/animals" exact component={Animal} />
+        <Route path="/people" exact component={People} />
+        <Route path='/nature' exact component={Nature}/>
+      </BrowserRouter>
     </>
   );
 }
