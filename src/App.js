@@ -12,9 +12,10 @@ function App() {
       <Header />
       <BrowserRouter>
         <Route path="/" exact component={Hero} />
+        <Route path="/" exact component={ImageList} />
         <Route path="/animals" exact component={Animal} />
         <Route path="/people" exact component={People} />
-        <Route path='/nature' exact component={Nature}/>
+        <Route path="/nature" exact component={Nature} />
       </BrowserRouter>
     </>
   );
