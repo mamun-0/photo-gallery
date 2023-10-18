@@ -9,8 +9,8 @@ import People from "./Components/Pages/People/People";
 function App() {
   return (
     <>
-      <Header />
       <BrowserRouter>
+      <Header />
         <Route path="/" exact component={Hero} />
         <Route path="/" exact component={ImageList} />
         <Route path="/animals" exact component={Animal} />

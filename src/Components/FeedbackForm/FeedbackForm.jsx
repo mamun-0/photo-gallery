@@ -1,11 +1,12 @@
 import { Component } from "react";
 import { Form, Input } from "reactstrap";
+import DB from "../../Data/photos";
 class FeedbackForm extends Component {
   constructor(props) {
+    // console.log("Feedback component ", props.id);
     super(props);
     this.state = {
       author: "",
-      category: "",
       feedback: "",
     };
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -20,18 +21,25 @@ class FeedbackForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    const findItem = DB.find((item) => {
+      return item.id === this.props.id;
+    });
+    findItem.comments.push({
+      id: findItem.comments.length,
+      text: this.state.feedback,
+      author: this.state.author,
+    });
     this.setState({
       author: "",
       feedback: "",
     });
-    this.props.toggle();
+    this.props.changeState();
   };
 
   render() {
     return (
       <div>
         <Form onSubmit={this.handleSubmit}>
-          
           <Input
             type="textarea"
             name="feedback"
