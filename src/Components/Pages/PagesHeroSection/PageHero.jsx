@@ -1,7 +1,7 @@
 import SectionHeading from "../../SectionHeading/SectionHeading";
 import "./PageHero.css";
 const PageHero = (props) => {
-  console.log("PageHero", props.background);
+  // console.log("PageHero", props.background);
   return (
     <>
       <div

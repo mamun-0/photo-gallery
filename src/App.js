@@ -6,6 +6,7 @@ import Header from "./Components/Navbar/Navbar";
 import Animal from "./Components/Pages/Animal/Animal";
 import Nature from "./Components/Pages/Nature/Nature";
 import People from "./Components/Pages/People/People";
+import Search from "./Components/Search/Search";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/animals" exact component={Animal} />
         <Route path="/people" exact component={People} />
         <Route path="/nature" exact component={Nature} />
+        <Route path="/search" exact component={Search} />
       </BrowserRouter>
     </>
   );

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/brand.jpg";
 import "./Navbar.css";
+import SearchBar from "../SearchBar/SearchBar";
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -49,6 +50,9 @@ const Header = () => {
           </ul>
           <div>
             <ul className="navbar-nav">
+              <li className="nav-item">
+                <SearchBar/>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/login">
                   Login
