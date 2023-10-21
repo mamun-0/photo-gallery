@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import FeedbackForm from "../FeedbackForm/FeedbackForm";
 import Comments from "../Comments/Comments";
+import { useEffect } from "react";
 
 function Popup(props) {
-  // console.log(props.comments);
   const [modal, setModal] = useState(false);
-  const [bool, setBool] = useState(false);
+  const [comment, setComment] = useState(null);
   const toggle = () => setModal(!modal);
-  const changeState = () => setBool(!bool);
+
+  useEffect(() => {
+    setComment(props.comments);
+  }, [props.comments]);
+  useEffect(() => {}, [comment]);
   return (
     <div>
       <Button className="btn btn-info" onClick={toggle}>
@@ -23,8 +27,8 @@ function Popup(props) {
             src={props.url}
             alt="img"
           />
-          <Comments comments={props.comments} />
-          <FeedbackForm {...props} changeState={changeState} />
+          <Comments comments={comment} />
+          <FeedbackForm {...props} setComment={setComment} />
         </ModalBody>
       </Modal>
     </div>

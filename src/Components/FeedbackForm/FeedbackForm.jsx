@@ -1,9 +1,9 @@
 import { Component } from "react";
 import { Form, Input } from "reactstrap";
-import DB from "../../Data/photos";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 class FeedbackForm extends Component {
   constructor(props) {
-    // console.log("Feedback component ", props.id);
     super(props);
     this.state = {
       author: "",
@@ -19,21 +19,24 @@ class FeedbackForm extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    const findItem = DB.find((item) => {
-      return item.id === this.props.id;
-    });
-    findItem.comments.push({
-      id: findItem.comments.length,
-      text: this.state.feedback,
+    const { data } = await axios.get(
+      `http://localhost:3001/pictures/${this.props.id}`
+    );
+    data.comments.push({
       author: this.state.author,
+      text: this.state.feedback,
+      id: uuidv4(),
     });
+    const res = await axios.put(`http://localhost:3001/pictures/${data.id}`, {
+      ...data,
+    });
+    this.props.setComment(res.data.comments);
     this.setState({
       author: "",
       feedback: "",
     });
-    this.props.changeState();
   };
 
   render() {
