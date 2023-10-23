@@ -10,10 +10,14 @@ class ImageList extends React.Component {
   }
 
   async componentDidMount() {
-    const { data } = await photoFetch();
-    this.setState({
-      images: data,
-    });
+    try {
+      const { data } = await photoFetch();
+      this.setState({
+        images: data,
+      });
+    } catch (err) {
+      console.log(err.message);
+    }
   }
   render() {
     if (!this.state.images) {
