@@ -37,9 +37,9 @@ class Header extends React.Component {
       <div className="d-flex justify-content-center align-items-center mx-3">
         <em className="text-white">{this.userEmail()}</em>
         <li className="nav-item">
-          <Link className="nav-link" to="/signout">
+          <a className="nav-link" href="/">
             SignOut
-          </Link>
+          </a>
         </li>
       </div>
     );

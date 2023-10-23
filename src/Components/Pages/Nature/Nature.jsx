@@ -7,11 +7,15 @@ const Nature = () => {
   const [natures, setNatures] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      const { data } = await axios.get("http://localhost:3001/pictures");
-      const filteredNatures = data.filter((nature) => {
-        return nature.category === "nature";
-      });
-      setNatures(filteredNatures);
+      try {
+        const { data } = await axios.get("http://localhost:3001/pictures");
+        const filteredNatures = data.filter((nature) => {
+          return nature.category === "nature";
+        });
+        setNatures(filteredNatures);
+      } catch (err) {
+        console.log(err.message);
+      }
     }
     fetchData();
   }, []);

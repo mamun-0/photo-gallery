@@ -9,11 +9,15 @@ const Animal = () => {
   const [animals, setAnimals] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      const { data } = await axios.get("http://localhost:3001/pictures");
-      const filteredAnimals = data.filter((animal) => {
-        return animal.category === "animal";
-      });
-      setAnimals(filteredAnimals);
+      try {
+        const { data } = await axios.get("http://localhost:3001/pictures");
+        const filteredAnimals = data.filter((animal) => {
+          return animal.category === "animal";
+        });
+        setAnimals(filteredAnimals);
+      } catch (err) {
+        console.log(err.message);
+      }
     }
     fetchData();
   }, []);

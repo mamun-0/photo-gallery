@@ -7,11 +7,15 @@ const People = () => {
   const [peoples, setPeoples] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      const { data } = await axios.get("http://localhost:3001/pictures");
-      const filteredPeoples = data.filter((people) => {
-        return people.category === "people";
-      });
-      setPeoples(filteredPeoples);
+      try {
+        const { data } = await axios.get("http://localhost:3001/pictures");
+        const filteredPeoples = data.filter((people) => {
+          return people.category === "people";
+        });
+        setPeoples(filteredPeoples);
+      } catch (err) {
+        console.log(err.message);
+      }
     }
     fetchData();
   }, []);
