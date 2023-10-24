@@ -9,8 +9,8 @@ class Header extends React.Component {
     try {
       if (this.props.storeSignIn) {
         return this.props.storeSignIn.email;
-      } else if (this.props.storeSignOut) {
-        return this.props.storeSignOut.email;
+      } else if (this.props.storeSignUp) {
+        return this.props.storeSignUp.email;
       } else {
         return null;
       }
