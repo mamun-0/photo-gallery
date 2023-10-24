@@ -53,7 +53,7 @@ class Login extends React.Component {
           loadingDiv
         ) : (
           <div className="container d-flex flex-column justify-content-center align-items-center">
-            <p className="display-5 text-center my-3">Login component</p>
+            <p className="display-5 text-center my-3">Login</p>
             <Form style={{ width: `50%` }} onSubmit={this.handleSubmit}>
               <Label for="email">Email</Label>
               <br />

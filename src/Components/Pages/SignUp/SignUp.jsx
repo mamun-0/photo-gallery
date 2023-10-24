@@ -58,7 +58,10 @@ class SignUp extends React.Component {
       </div>
     );
     const alertUI = (
-      <div className="alert alert-danger d-flex align-items-center mt-2" role="alert">
+      <div
+        className="alert alert-danger d-flex align-items-center mt-2"
+        role="alert"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -81,7 +84,7 @@ class SignUp extends React.Component {
         ) : (
           <div className="container d-flex flex-column justify-content-center align-items-center">
             {this.state.alert ? alertUI : null}
-            <p className="display-5 text-center my-2">SignUp component</p>
+            <p className="display-5 text-center my-2">SignUp</p>
             <Form style={{ width: `50%` }} onSubmit={this.handleSubmit}>
               <Label for="email">Email</Label>
               <br />

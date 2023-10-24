@@ -1,5 +1,5 @@
 .hero-section {
-    background: url('../../assets/hero.avif') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1695982206556-b24503f14a0a?auto=compress&auto=format&fit=crop&q=45&dpr=1&h=594&w=1399&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     height: 100vh;
     color: #fff;
     display: flex;
@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 85vh;
+    height: 88vh;
   }
   
   .hero-content {
