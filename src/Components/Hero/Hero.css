@@ -1,41 +1,46 @@
 .hero-section {
-    background: url('https://images.unsplash.com/photo-1695982206556-b24503f14a0a?auto=compress&auto=format&fit=crop&q=45&dpr=1&h=594&w=1399&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 88vh;
-  }
-  
-  .hero-content {
-    max-width: 600px;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  /* background: url('https://images.unsplash.com/photo-1695982206556-b24503f14a0a?auto=compress&auto=format&fit=crop&q=45&dpr=1&h=594&w=1399&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; */
+  background-image: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url("https://images.unsplash.com/photo-1695982206556-b24503f14a0a?auto=compress&auto=format&fit=crop&q=45&dpr=1&h=594&w=1399&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8fA%3D%3D");
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 88vh;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

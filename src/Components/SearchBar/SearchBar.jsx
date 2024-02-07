@@ -36,7 +36,7 @@ class SearchBar extends React.Component {
             placeholder="search"
           />
         </div>
-        <button className="btn btn-primary">Search</button>
+        <button className="btn btn-primary mx-2">Search</button>
       </form>
     );
   }
