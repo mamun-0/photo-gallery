@@ -4,7 +4,13 @@ const PageHero = (props) => {
   return (
     <>
       <div
-        style={{ backgroundImage: `url(${props.background})` }}
+        style={{
+          backgroundImage: `linear-gradient(
+          180deg,
+          rgba(19, 19, 24, 0.8) 0%,
+          rgba(19, 19, 24, 0) 100%
+        ), url(${props.background})`,
+        }}
         className="page-hero"
       >
         <div className="hero-content">
